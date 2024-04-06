@@ -15,15 +15,19 @@
   --color-success: #497CFF;
   --color-error: #FF4747;
 
-  --color-gradient: linear-gradient(to bottom, var(--color-green-2), var(--color-green-2), var(--color-green-1));
+  --color-gradient: linear-gradient(to bottom, var(--color-green-2), var(--color-green-1));
 
-  --button-shadow: 0 0 10px #0000001a;
+  --button-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --card-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  --input-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
   --background-color: var(--color-white-1); 
   --button-color: var(--color-green-2);
   --text-color: var(--color-white-2);
   --title-color: var(--color-green-3);
   --menu-color: var(--color-black);
+  --card-color: var(--color-white-1);
+  --focus-color: var(--color-green-1);
 
   --h1-color: var(--color-green-3);
   --h2-color: var(--color-black);
@@ -152,8 +156,9 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
   text-align: center;
+  cursor: pointer;
   box-shadow: var(--button-shadow);
-  transition: background-color 100ms ease;
+  transition: all 100ms ease;
 }
 
 .button-white {
@@ -162,7 +167,8 @@ body {
 }
 
 .button-white:hover {
-  background-color: var(--color-white-2);
+  border: 1px solid var(--color-green-3);
+  color: var(--color-green-3);;
 }
 
 .button-green {
@@ -177,6 +183,8 @@ body {
 
 .main-content {
   padding-top: 60px;
+  display: grid;
+  gap: 4rem;
 }
 
 .hero-section {
@@ -186,8 +194,6 @@ body {
   background-position: left;
   background-repeat: no-repeat;
   min-height: 85vh;
-  /* overflow-x: hidden; */
-  /* overflow-y: visible; */
 }
 
 .hero-section .wrapper {
@@ -226,7 +232,6 @@ body {
 
 .side-info {
   flex: 1;
-
   color: var(--text-color);
   border-radius: 0 0 0 400px;
   position: relative;
@@ -234,15 +239,14 @@ body {
 }
 
 .side-info::before {
-  background-image: var(--color-gradient);
   content: "";
   height: 150vh;
-  width: 100vw;
+  width: 39.7vw;
+  background-image: var(--color-gradient);
   border-radius: 0 0 0 calc(100vh);
   position: absolute;
   top: -180px;
   z-index: -1;
-  width: 39.7vw;
 }
 
 .side-info p {
@@ -252,3 +256,114 @@ body {
   line-height: 1.2rem;
 }
 
+.card-section {
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--h2-color);
+  margin-bottom: 1rem;
+}
+
+.card-section .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.grid .card {
+  background-color: var(--card-color);
+  padding-top: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  height: 300px;
+}
+
+.card div {
+  min-height: 4rem;
+}
+
+.card img {
+  height: auto;
+  width: 100%;
+}
+
+.card h3 {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0 1.5rem;
+  line-height: 1.2rem;
+}
+
+.contact-section {
+  background-color: var(--color-green-1);
+  padding: 3rem 0;
+}
+
+.contact-form {
+  background-color: var(--color-white-1);
+  box-shadow: var(--card-shadow);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 70%;
+}
+
+.form-fields .form-infos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-fields .form-message {
+  display: block;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-field label {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: var(--color-black);
+}
+
+.input-field input,
+.input-field textarea {
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--input-shadow);
+  color: var(--color-gray);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+}
+
+.input-field input {
+  padding: 0.2rem 1rem;
+  height: 2rem;
+}
+
+.input-field textarea {
+  resize: vertical;
+  padding: 0.8rem 1rem;
+  max-height: 550px;
+}
+
+.input-field input:focus, 
+.input-field textarea:focus {
+  box-shadow: none;
+  outline: none;
+  border: 1px solid var(--focus-color);
+}
+
+.form-submit {
+  display: flex;
+  justify-content: end;
+}

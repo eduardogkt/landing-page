@@ -65,63 +65,96 @@
       </section>
       
       <section class="card-section">
-        <h2>Title for the card section.</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Register your plants.</h3>
-            <img 
-              src="./resources/images/card-image-1.png" 
-              alt="image of a plant card 1"
-            >
-          </div>
-          <div class="card">
-            <h3>Search for flowers and trees.</h3>
-            <img 
+        <div class="wrapper">
+
+          <h2 class="section-title">Title for the card section.</h2>
+          <div class="grid">
+            <div class="card">
+              <div>
+                <h3>Register your plants.</h3>
+              </div>
+              <img 
               src="./resources/images/card-image-2.png" 
+              alt="image of a plant card 1"
+              >
+            </div>
+            <div class="card">
+              <div>
+                <h3>Search for flowers and trees.</h3>
+              </div>
+              <img 
+              src="./resources/images/card-image-3.png" 
               alt="image of a plant card 2"
-            >
-          </div>
-          <div class="card">
-            <h3>Keep it organized.</h3>
-            <img src="./resources/images/card-image-3.png" 
+              >
+            </div>
+            <div class="card">
+              <div>
+                <h3>Keep it organized.</h3>
+              </div>
+              <img src="./resources/images/card-image-2.png" 
               alt="image of a plant card 3"
-            >
+              >
+            </div>
+            <div class="card">
+              <div>
+                <h3>Share with friends.</h3>
+              </div>
+              <img src="./resources/images/card-image-3.png" 
+              alt="image of a plant card 3"
+              >
+            </div>
           </div>
         </div>
       </section>
 
       <section class="contact-section">
-        <form action="" method="GET" class="form contacct">
-          <div>
-            <label for="contact-name">Full name:</label>
-            <input 
-            type="text"
-            placeholder=""
-            name="contact-name"
-            required
-            >
-            
-            <label for="contact-emal">Email:</label>
-            <input 
-            type="email"
-            placeholder=""
-            name="contact-email"
-            required
-            >
-          </div>
+        <div class="wrapper">
 
-          <div>
-            <label for="contact-name">Message:</label>
-            <input 
-              type="text"
-              placeholder=""
-              name="contact-message"
-              required
-            >
+          <form action="" method="GET" class="contact-form">
+            <h2 class="section-title">Contact us.</h2>
             
-            <input type="submit" value="Send message">
-          </div>
-        </form>
+            <div class="form-fields">
+              <div class="form-infos">
+                <div class="input-field">
+                  <label for="contact-name">Full name:</label>
+                  <input 
+                  type="text"
+                  placeholder=""
+                  name="contact-name"
+                  required
+                  >
+                </div>
+
+                <div class="input-field">
+                  <label for="contact-email">Email:</label>
+                  <input 
+                  type="email"
+                  placeholder=""
+                  name="contact-email"
+                  required
+                  >
+                </div>
+              </div>
+              
+              <div class="form-message">
+                <div class="input-field">
+                  <label for="contact-message">Message:</label>
+                  <textarea 
+                    name="contact-message" 
+                    cols="30"
+                    rows="10"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-submit">
+                <input type="submit" value="Send message" class="button button-green">
+              </div>
+            </div>
+
+          </form>
+        </div>
       </section>
     </main>
 
