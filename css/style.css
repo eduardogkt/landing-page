@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --root-font-size: 16px;
+
+  --color-green-1: #BBD39F;
+  --color-green-2: #64BB5E;
+  --color-green-3: #1AA043;
+  --color-green-4: #3A4A3E;
+  --color-green-5: #445C4A;
+  --color-black: #2D2D2D;
+  --color-gray: #676767;
+  --color-white-1: #FFFFFF;
+  --color-white-2: #F4F4F4;
+  --color-success: #497CFF;
+  --color-error: #FF4747;
+
+  --color-gradient: linear-gradient(to bottom, var(--color-green-2), var(--color-green-2), var(--color-green-1));
+
+  --button-shadow: 0 0 10px #0000001a;
+
+  --background-color: var(--color-white-1); 
+  --button-color: var(--color-green-2);
+  --text-color: var(--color-white-2);
+  --title-color: var(--color-green-3);
+  --menu-color: var(--color-black);
+
+  --h1-color: var(--color-green-3);
+  --h2-color: var(--color-black);
+  --h3-color: var(--color-gray);
+
+  --side-card-bg: var(var(--color-gradient));
+  --footer-bg: var(--color-green-4);
+  --footer-icon: var(--color-green-4);
 }
 
 * {
@@ -15,5 +47,208 @@ html {
 
 body {
   font-size: var(--root-font-size, 16px);
+  font-family: 'Montserrat';
+  background-color: var(--background-color);
+}
+
+.page-layout {
 
 }
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.page-header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--background-color);
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.page-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.logo a {
+  font-size: 1.1rem;
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  font-size: 0.9rem;
+  height: 100%;
+}
+
+.menu-list {
+  display: flex;
+  gap: 4rem;
+  align-items: end;
+  font-size: 0.9rem;
+  height: 100%;
+  color: var(--menu-color);
+}
+
+.menu-list a {
+  color: var(--menu-color);
+  padding-bottom: 20px;
+  text-align: center;
+  width: 50px;
+  transition: padding-bottom 100ms linear;
+  font-size: 0.9rem;
+}
+
+.menu-list a:hover,
+.menu-list a.active {
+  padding-bottom: 18px;
+}
+
+.menu-list a:hover::after,
+.menu-list a.active::after {
+  content: "";
+  position: relative;
+  top: 18px;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-black);
+  border-radius: 10px;
+}
+
+.menu > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.75rem;
+  border-radius: 10px;
+  min-width: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: var(--button-shadow);
+  transition: background-color 100ms ease;
+}
+
+.button-white {
+  border: 1px solid var(--color-green-2);
+  color: var(--color-green-2);
+}
+
+.button-white:hover {
+  background-color: var(--color-white-2);
+}
+
+.button-green {
+  border: 1px solid var(--button-color);
+  color: var(--text-color);
+  background-color: var(--button-color);
+}
+
+.button-green:hover {
+  background-color: var(--color-green-3);
+}
+
+.main-content {
+  padding-top: 60px;
+}
+
+.hero-section {
+  background-color: var(--background-color);
+  background-image: url("../resources/images/background.svg");
+  background-size: auto 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  min-height: 85vh;
+  /* overflow-x: hidden; */
+  /* overflow-y: visible; */
+}
+
+.hero-section .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 85vh;
+  overflow: visible
+}
+
+.intro-info {
+  flex: 2;
+}
+
+.intro-info h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  word-spacing: -1%;
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+
+.intro-info  h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--h2-color);
+  margin-bottom: 1rem;
+}
+
+.intro-info p {
+  font-size: 1rem;
+  color: var(--h3-color);
+  margin-bottom: 1rem;
+  max-width: 80%;
+}
+
+.side-info {
+  flex: 1;
+
+  color: var(--text-color);
+  border-radius: 0 0 0 400px;
+  position: relative;
+  z-index: 1;
+}
+
+.side-info::before {
+  background-image: var(--color-gradient);
+  content: "";
+  height: 150vh;
+  width: 100vw;
+  border-radius: 0 0 0 calc(100vh);
+  position: absolute;
+  top: -180px;
+  z-index: -1;
+  width: 39.7vw;
+}
+
+.side-info p {
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+

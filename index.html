@@ -15,32 +15,140 @@
 
 <body>
   <div class="page-layout">
-    <header class="page-header">
-      <div class="icon-wrapper">
-        <img src="resources/icons/leaf-single-2.png" alt="page logo">
+    <header class="page-header" id="header">
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#">
+            <img src="resources/icons/leaf-single-2.png" alt="page logo">
+          </a>
+          <a href="#">Virentia.</a>
+        </div>
+        <nav class="menu">
+          <ul class="menu-list">
+            <a href="index.html" class="active">home</a>
+            <a href="about.html">about</a>
+            <a href="blog.html">blog</a>
+          </ul>
+          <div>
+            <a href="login.html" class="button button-white" id="login">log in</a>
+            <a href="register.html" class="button button-green" id="register">register</a>
+          </div>
+        </nav>
       </div>
-      <nav class="menu">
-        <ul class="menu-list">
-          <li class="active">
-            <a href="index.html">home</a>
-          </li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="blog.html">blog</a></li>
-          <li><a href="register.html">register</a></li>
-        </ul>
-      </nav>
     </header>
-    <main>
-      <div class="content-wrapper">
 
-      </div>
+    <main class="main-content">
+      <section class="hero-section">
+        <div class="wrapper">
+          <div class="intro-info">
+            <h1>Virentia.</h1>
+            <h2>Register and search for your plants.</h2>
+            <p>
+              A website landing page for registering, categorizing and 
+              searching for plants.
+            </p>
+            <button class="button button-green">catalog your first plant</button>
+          </div>
+          <div class="side-info">
+            <p>
+              Lorem ipsum dolor  sit amet, consectetur adipiscing elit, sed do 
+              eiusmod tempor incididunt  ut labore et dolore magna aliqua.
+            </p>
+            <p>
+              Ut enim ad minim veniam, quis nostrud  exercitation ullamco 
+              laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum 
+              dolor  sit amet, consectetur adipiscing elit, sed do eiusmod 
+              tempor incididunt  ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="card-section">
+        <h2>Title for the card section.</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Register your plants.</h3>
+            <img 
+              src="./resources/images/card-image-1.png" 
+              alt="image of a plant card 1"
+            >
+          </div>
+          <div class="card">
+            <h3>Search for flowers and trees.</h3>
+            <img 
+              src="./resources/images/card-image-2.png" 
+              alt="image of a plant card 2"
+            >
+          </div>
+          <div class="card">
+            <h3>Keep it organized.</h3>
+            <img src="./resources/images/card-image-3.png" 
+              alt="image of a plant card 3"
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <form action="" method="GET" class="form contacct">
+          <div>
+            <label for="contact-name">Full name:</label>
+            <input 
+            type="text"
+            placeholder=""
+            name="contact-name"
+            required
+            >
+            
+            <label for="contact-emal">Email:</label>
+            <input 
+            type="email"
+            placeholder=""
+            name="contact-email"
+            required
+            >
+          </div>
+
+          <div>
+            <label for="contact-name">Message:</label>
+            <input 
+              type="text"
+              placeholder=""
+              name="contact-message"
+              required
+            >
+            
+            <input type="submit" value="Send message">
+          </div>
+        </form>
+      </section>
     </main>
-    <footer>
-      <div class="content-wrapper">
 
+    <footer class="footer-content">
+      <div class="wrapper">
+        <div class="social">
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+        </div>
+        <div class="company">
+          <a href="">Terms and Conditions</a>
+          <a href="">Privacy</a>
+          <a href="">Help</a>
+          <a href="">App</a>
+        </div>
+        <div class="address">
+          Rua das Flores, 204, 5th floor, Curitiba, Brazil.
+        </div>
+        <div class="copy">
+          feito por eduardo tanaka &copy; 2024
+        </div>
       </div>
     </footer>
   </div>
+
+  <script src="index.js"></script>
 
 </body>
 </html>
