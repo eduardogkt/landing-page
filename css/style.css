@@ -21,6 +21,7 @@
   --card-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   --input-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
+  --logo-color: var(--color-green-2);
   --background-color: var(--color-white-1); 
   --button-color: var(--color-green-2);
   --text-color: var(--color-white-2);
@@ -87,16 +88,15 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
 .logo img {
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
 }
 
 .logo a {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--title-color);
   font-weight: 700;
 }
