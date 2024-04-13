@@ -17,18 +17,22 @@
 
   --color-gradient: linear-gradient(to bottom, var(--color-green-2), var(--color-green-1));
 
-  --button-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --button-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1), 
+                   inset 0 2px 10px rgba(255, 255, 255, 0.2);
   --card-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   --input-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
   --logo-color: var(--color-green-2);
   --background-color: var(--color-white-1); 
-  --button-color: var(--color-green-2);
   --text-color: var(--color-white-2);
   --title-color: var(--color-green-3);
   --menu-color: var(--color-black);
   --card-color: var(--color-white-1);
   --focus-color: var(--color-green-1);
+
+  --button-color: var(--color-green-2);
+  --button-border-color: rgba(100, 187, 94, 0.5);
+  --button-border: 1px solid var(--button-border-color);
 
   --h1-color: var(--color-green-3);
   --h2-color: var(--color-black);
@@ -179,7 +183,9 @@ body {
 
 .button {
   padding: 0.75rem;
+  border: var(--button-border);
   border-radius: 10px;
+  font-family: 'Montserrat';
   min-width: 100px;
   font-size: 0.8rem;
   font-weight: 500;
@@ -190,19 +196,17 @@ body {
 }
 
 .button-white {
-  border: 1px solid var(--color-green-2);
   color: var(--color-green-2);
 }
 
 .button-white:hover {
-  border: 1px solid var(--color-green-3);
-  color: var(--color-green-3);;
+  color: var(--color-green-3);
 }
 
 .button-green {
-  border: 1px solid var(--button-color);
   color: var(--text-color);
   background-color: var(--button-color);
+  border: none;
 }
 
 .button-green:hover {
@@ -239,23 +243,25 @@ body {
 
 .intro-info h1 {
   font-size: 3rem;
-  font-weight: 600;
-  word-spacing: -1%;
+  font-weight: 650;
+  letter-spacing: 0.5px;
   color: var(--title-color);
   margin-bottom: 1rem;
 }
 
 .intro-info  h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--h2-color);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .intro-info p {
   font-size: 1rem;
+  font-weight: 450;
+  line-height: 1.5rem;
   color: var(--h3-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   max-width: 80%;
 }
 
@@ -316,7 +322,7 @@ body {
 }
 
 .grid .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card div {
@@ -344,7 +350,7 @@ body {
   background-color: var(--color-white-1);
   box-shadow: var(--card-shadow);
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1.9rem 2rem;
   width: 70%;
 }
 
